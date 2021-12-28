@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.*
 import androidx.navigation.compose.composable
+import com.example.healm.SplashScreen
 import com.example.healm.Utils.Constants.BOTTOM_BAR_ROUTE
 import com.example.healm.ui.screens.*
 import com.example.healm.ui.screens.yoga.YogaItemScreen
@@ -12,9 +13,12 @@ import com.example.healm.viewmodels.ChatViewModel
 fun NavGraphBuilder.BottomNavGraph(viewModel: ChatViewModel, navController: NavController) {
 
     navigation(
-        startDestination = MainScreen.Yoga.route,
+        startDestination = MainScreen.SplashScreen.route,
         route = BOTTOM_BAR_ROUTE
     ){
+        composable(route = MainScreen.SplashScreen.route){
+            SplashScreen(navController = navController)
+        }
         composable(route = MainScreen.Yoga.route){
             YogaScreen(navController = navController)
         }

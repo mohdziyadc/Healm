@@ -8,4 +8,5 @@ sealed class MainScreen(val route:String, val title:String?, val icon:Int?, var 
     object Meditation:MainScreen(route = "meditation",title = "Meditate" ,icon = R.drawable.ic_outline_spa_24, icon2 = R.drawable.ic_baseline_spa_24)
     object ChatBot:MainScreen(route = "chat_bot", title = "Allie", icon = R.drawable.outline_smart_toy_24 )
     object YogaItem:MainScreen(route = "yoga_item", title = null, icon = null )
+    object SplashScreen:MainScreen(route = "splash", title = null, icon = null)
 }
